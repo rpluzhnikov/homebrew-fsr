@@ -10,10 +10,7 @@ class Fsr < Formula
     depends_on "python"
   
     def install
-      venv = virtualenv_create(libexec, "python3")
-      venv.pip_install "fsr==0.1.0"
-      echo 'pip installed'
-      bin.install_symlink libexec/"bin/fsr"
+      virtualenv_install_with_resources
     end
   
     test do
