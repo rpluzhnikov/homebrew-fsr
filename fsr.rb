@@ -12,6 +12,7 @@ class Fsr < Formula
     def install
       venv = virtualenv_create(libexec, "python3")
       venv.pip_install "fsr==0.1.0"
+      echo 'pip installed'
       bin.install_symlink libexec/"bin/fsr"
     end
   
