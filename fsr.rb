@@ -7,7 +7,7 @@ class Fsr < Formula
     sha256 "5c31036fedd7cde319a23ee0dd9403796c4ca2d149ddfecad636044b9bd1dc30"
     license "MIT"
   
-    depends_on "python@3.9"
+    depends_on "python"
   
     def install
       virtualenv_create(libexec, "python3")
