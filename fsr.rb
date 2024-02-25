@@ -10,9 +10,8 @@ class Fsr < Formula
     depends_on "python"
   
     def install
-      virtualenv_create(libexec, "python3")
-      system libexec/"bin/pip", "install", "fsr==0.1.0"
-      bin.install_symlink libexec/"bin/fsr" => "fsr"
+      system "python3", "-m", "pip", "install", "fsr==0.1.0", "--prefix=#{prefix}", "--no-deps"
+      bin.install_symlink "#{prefix}/bin/fsr"
     end
   
     test do
